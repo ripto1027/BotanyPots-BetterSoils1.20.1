@@ -1,0 +1,27 @@
+{
+  "type": "botanypots:crop",
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": "minecraft:gold_block"
+    }
+  ],
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "minecraft:gold_block"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "minecraft:gold_ingot"
+      }
+    }
+  ],
+  "growthTicks": 1200.0,
+  "seed": {
+    "item": "minecraft:gold_block"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "decompress",
+  "ingredients": [
+    {
+      "item": "bettersoils:sextuple_compressed_dirt"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "bettersoils:quintuple_compressed_dirt"
+  }
+}

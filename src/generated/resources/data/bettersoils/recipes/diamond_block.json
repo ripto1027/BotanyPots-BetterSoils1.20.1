@@ -1,0 +1,27 @@
+{
+  "type": "botanypots:crop",
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": "minecraft:diamond_block"
+    }
+  ],
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "minecraft:diamond_block"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "minecraft:diamond"
+      }
+    }
+  ],
+  "growthTicks": 1200.0,
+  "seed": {
+    "item": "minecraft:diamond_block"
+  }
+}

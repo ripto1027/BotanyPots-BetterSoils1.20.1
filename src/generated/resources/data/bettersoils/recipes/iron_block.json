@@ -1,0 +1,27 @@
+{
+  "type": "botanypots:crop",
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": "minecraft:iron_block"
+    }
+  ],
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "minecraft:iron_block"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "minecraft:iron_ingot"
+      }
+    }
+  ],
+  "growthTicks": 1200.0,
+  "seed": {
+    "item": "minecraft:iron_block"
+  }
+}

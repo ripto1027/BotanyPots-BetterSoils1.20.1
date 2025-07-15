@@ -1,0 +1,27 @@
+{
+  "type": "botanypots:crop",
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": "megacells:sky_steel_block"
+    }
+  ],
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "megacells:sky_steel_block"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "megacells:sky_steel_ingot"
+      }
+    }
+  ],
+  "growthTicks": 1200.0,
+  "seed": {
+    "item": "megacells:sky_steel_block"
+  }
+}

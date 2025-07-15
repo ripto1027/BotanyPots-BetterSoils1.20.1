@@ -1,0 +1,16 @@
+{
+  "values": [
+    "bettersoils:compressed_cobblestone",
+    "bettersoils:double_compressed_cobblestone",
+    "bettersoils:triple_compressed_cobblestone",
+    "bettersoils:quadruple_compressed_cobblestone",
+    "bettersoils:quintuple_compressed_cobblestone",
+    "bettersoils:sextuple_compressed_cobblestone",
+    "bettersoils:septuple_compressed_cobblestone",
+    "bettersoils:octuple_compressed_cobblestone",
+    "bettersoils:nontuple_compressed_cobblestone",
+    "bettersoils:decuple_compressed_cobblestone",
+    "bettersoils:undecuple_compressed_cobblestone",
+    "bettersoils:duodecuple_compressed_cobblestone"
+  ]
+}

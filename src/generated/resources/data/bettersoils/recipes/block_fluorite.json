@@ -1,0 +1,27 @@
+{
+  "type": "botanypots:crop",
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:item_exists",
+      "values": "mekanism:block_fluorite"
+    }
+  ],
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "mekanism:block_fluorite"
+  },
+  "drops": [
+    {
+      "chance": 1.0,
+      "output": {
+        "item": "mekanism:fluorite_gem"
+      }
+    }
+  ],
+  "growthTicks": 1200.0,
+  "seed": {
+    "item": "mekanism:block_fluorite"
+  }
+}

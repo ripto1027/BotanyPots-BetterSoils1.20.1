@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "compress",
+  "key": {
+    "#": {
+      "item": "bettersoils:triple_compressed_cobblestone"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "bettersoils:quadruple_compressed_cobblestone"
+  },
+  "show_notification": true
+}

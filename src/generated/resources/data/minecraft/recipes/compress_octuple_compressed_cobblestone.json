@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "compress",
+  "key": {
+    "#": {
+      "item": "bettersoils:septuple_compressed_cobblestone"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "bettersoils:octuple_compressed_cobblestone"
+  },
+  "show_notification": true
+}

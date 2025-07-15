@@ -1,0 +1,13 @@
+{
+  "type": "botanypots:soil",
+  "categories": [
+    "compressed_cobblestone"
+  ],
+  "display": {
+    "block": "bettersoils:octuple_compressed_cobblestone"
+  },
+  "growthModifier": 2.4,
+  "input": {
+    "item": "bettersoils:octuple_compressed_cobblestone"
+  }
+}

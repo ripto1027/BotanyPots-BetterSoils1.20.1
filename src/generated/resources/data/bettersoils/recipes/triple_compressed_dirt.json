@@ -1,0 +1,13 @@
+{
+  "type": "botanypots:soil",
+  "categories": [
+    "dirt"
+  ],
+  "display": {
+    "block": "bettersoils:triple_compressed_dirt"
+  },
+  "growthModifier": 2.0,
+  "input": {
+    "item": "bettersoils:triple_compressed_dirt"
+  }
+}

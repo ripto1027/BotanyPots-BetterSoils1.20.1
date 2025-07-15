@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "decompress",
+  "ingredients": [
+    {
+      "item": "bettersoils:nontuple_compressed_cobblestone"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "bettersoils:octuple_compressed_cobblestone"
+  }
+}
