@@ -153,6 +153,9 @@ dependencies {
     implementation fg.deobf("curse.maven:botany-pots-353928:6348581")
     runtimeOnly fg.deobf("curse.maven:jei-238222:6075247")
     runtimeOnly fg.deobf("curse.maven:jade-324717:6271651")
+    runtimeOnly fg.deobf("curse.maven:trash-cans-394535:4712179")
+    runtimeOnly fg.deobf("curse.maven:supermartijn642s-core-lib-454372:6034718")
+    runtimeOnly fg.deobf("curse.maven:supermartijn642s-config-lib-438332:4715408")
     //runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:6206989")
 }
 

@@ -83,11 +83,13 @@ public class BetterSoilsRecipeProvider extends RecipeProvider {
         cropRecipesDrops(writer, "minecraft:redstone_block", "minecraft:redstone");
 
         cropRecipesDisplay(writer, "ae2:certus_quartz_crystal", "ae2:quartz_cluster");
-        cropRecipesDisplay(writer, "ae2:certus_quartz_dust", "ae2:certus_quartz_bud");
+        cropRecipesDisplay(writer, "ae2:certus_quartz_dust", "ae2:large_quartz_bud");
         cropRecipesDisplay(writer, "ae2:fluix_crystal", "ae2:fluix_block");
         cropRecipes(writer, "ae2:sky_stone_block");
 
         cropRecipesDrops(writer, "create:zinc_block", "create:zinc_ingot");
+
+        cropRecipesDisplay(writer, "enderio:grains_of_infinity", "enderio:void_chassis");
 
         cropRecipesDrops(writer, "immersiveengineering:storage_aluminum", "immersiveengineering:ingot_aluminum");
         cropRecipesDrops(writer, "immersiveengineering:storage_nickel", "immersiveengineering:ingot_nickel");

@@ -39,7 +39,7 @@ public class GeneratorBlockEntity extends BlockEntity {
 
         @Override
         public int getSlotLimit(int slot) {
-            return Math.max(generateCount, 4096);
+            return Math.max(generateCount, 1024);
         }
 
         @Override
@@ -80,23 +80,19 @@ public class GeneratorBlockEntity extends BlockEntity {
         }
     }
 
-    public int addGenerateCount(int value) {
-        int result = generateCount + value;
-        if (result > inventory.getSlotLimit(0)) {
-            setGenerateCount(inventory.getSlotLimit(0));
-            return result - inventory.getSlotLimit(0);
-        } else {
-            generateCount += value;
-            setChanged();
-            return 0;
-        }
+    public int getGenerateCount() {
+        return generateCount;
     }
 
-    public void setGenerateCount(int value) {
-        if (value <= inventory.getSlotLimit(0)) {
-            this.generateCount = value;
+    public void addGenerateCount(int value) {
+            generateCount += value;
             setChanged();
-        }
+    }
+
+    @SuppressWarnings("unused")
+    public void setGenerateCount(int value) {
+        this.generateCount = value;
+        setChanged();
     }
 
     public void setTargetPos(BlockPos pos) {
@@ -108,18 +104,28 @@ public class GeneratorBlockEntity extends BlockEntity {
         if (level == null) return;
 
         ItemStack stack = inventory.getStackInSlot(0);
-        int count = stack.getCount();
+        int count = Math.min(stack.getCount(), 1024);
         double result = (double) count / 64;
         double round = Math.floor(result);
-        int size = (int) round + 1;
         int mod = count % 64;
+        int size;
+        if (mod == 0) {
+            size = (int) result;
+        } else {
+            size = (int) round + 1;
+        }
         SimpleContainer container = new SimpleContainer(size);
-
-        for (int i = 0; i < size; i++) {
-            if (i != size - 1) {
+        if (mod == 0) {
+            for (int i = 0; i < size; i++) {
                 container.setItem(i, new ItemStack(stack.getItem(), 64));
-            } else {
-                container.setItem(i, new ItemStack(stack.getItem(), mod));
+            }
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (i != size - 1) {
+                    container.setItem(i, new ItemStack(stack.getItem(), 64));
+                } else {
+                    container.setItem(i, new ItemStack(stack.getItem(), mod));
+                }
             }
         }
         Containers.dropContents(level, worldPosition, container);

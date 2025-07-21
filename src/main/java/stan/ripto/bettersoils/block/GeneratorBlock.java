@@ -3,6 +3,7 @@ package stan.ripto.bettersoils.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +27,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import stan.ripto.bettersoils.blockentity.GeneratorBlockEntity;
+import stan.ripto.bettersoils.datagen.client.lang.TranslateKeys;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,19 +81,22 @@ public class GeneratorBlock<G extends GeneratorBlockEntity> extends BaseEntityBl
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         ItemStack stack = pPlayer.getItemInHand(pHand);
-        if (stack.getItem() == Items.DIAMOND) {
-            int count = stack.getCount();
-            BlockEntity tile = pLevel.getBlockEntity(pPos);
-            if (tileClass.isInstance(tile)) {
-                int result = tileClass.cast(tile).addGenerateCount(count);
-                stack.shrink(64 - result);
+        BlockEntity tile = pLevel.getBlockEntity(pPos);
+
+        if (tileClass.isInstance(tile)) {
+            G gen = tileClass.cast(tile);
+            if (stack.getItem() == Items.DIAMOND) {
+                int count = stack.getCount();
+                gen.addGenerateCount(count);
+                stack.shrink(count);
                 return InteractionResult.SUCCESS;
-            } else {
-                return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+            } else if (stack.isEmpty()) {
+                int generating = gen.getGenerateCount();
+                pPlayer.displayClientMessage(Component.translatable(TranslateKeys.generateCountTooltip.KEY, generating), true);
+                return InteractionResult.SUCCESS;
             }
-        } else {
-            return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
         }
+        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
     @SuppressWarnings("deprecation")

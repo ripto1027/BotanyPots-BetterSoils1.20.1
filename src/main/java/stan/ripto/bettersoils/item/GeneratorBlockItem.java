@@ -28,12 +28,11 @@ import java.util.List;
 
 public class GeneratorBlockItem<G extends GeneratorBlockEntity> extends BlockItem {
     private final Class<G> tileClass;
-    private int currentGenerateCount;
+    protected int currentGenerateCount = 1;
 
     public GeneratorBlockItem(Block pBlock, Class<G> tileClass) {
         super(pBlock, new Item.Properties());
         this.tileClass = tileClass;
-        this.currentGenerateCount = 1;
     }
 
     @Override
@@ -102,9 +101,13 @@ public class GeneratorBlockItem<G extends GeneratorBlockEntity> extends BlockIte
             }
             if (nbt.contains(GeneratorBlockEntity.SAVE_GENERATE_COUNT)) {
                 currentGenerateCount = nbt.getInt(GeneratorBlockEntity.SAVE_GENERATE_COUNT);
+                pTooltip.add(Component.translatable(TranslateKeys.generateCountTooltip.KEY, currentGenerateCount).withStyle(ChatFormatting.GRAY));
+            } else {
+                pTooltip.add(Component.translatable(TranslateKeys.generateCountTooltip.KEY, 1).withStyle(ChatFormatting.GRAY));
             }
+        } else {
+            pTooltip.add(Component.translatable(TranslateKeys.generateCountTooltip.KEY, 1).withStyle(ChatFormatting.GRAY));
         }
-        pTooltip.add(Component.translatable(TranslateKeys.generateCountTooltip.KEY, currentGenerateCount).withStyle(ChatFormatting.GRAY));
     }
 
     @Override
