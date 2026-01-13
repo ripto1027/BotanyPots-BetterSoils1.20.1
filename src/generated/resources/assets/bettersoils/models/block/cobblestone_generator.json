@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "bettersoils:block/cobblestone_generator_front",
-    "side": "bettersoils:block/generator",
-    "top": "bettersoils:block/generator"
-  }
-}

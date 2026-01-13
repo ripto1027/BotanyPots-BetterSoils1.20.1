@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "triple_compressed_dirt",
+  "key": {
+    "A": {
+      "item": "bettersoils:double_compressed_dirt"
+    },
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "C": {
+      "item": "minecraft:brown_dye"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "item": "bettersoils:triple_compressed_dirt"
+  },
+  "show_notification": true
+}

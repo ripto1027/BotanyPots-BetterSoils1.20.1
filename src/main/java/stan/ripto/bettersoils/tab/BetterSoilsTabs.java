@@ -17,11 +17,10 @@ public class BetterSoilsTabs {
                 () -> CreativeModeTab
                         .builder()
                         .title(Component.literal("Botany Pots: Better Soils"))
-                        .icon(BetterSoilsBlocks.DUODECUPLE_COMPRESSED_COBBLESTONE.get().asItem()::getDefaultInstance)
+                        .icon(BetterSoilsBlocks.SEXTUPLE_COMPRESSED_DIRT.get().asItem()::getDefaultInstance)
                         .displayItems((param, output) -> {
                             BetterSoilsBlocks.blockRegistryList.forEach(element -> output.accept(element.get()));
                             output.accept(BetterSoilsBlocks.DIRT_GENERATOR.get());
-                            output.accept(BetterSoilsBlocks.COBBLESTONE_GENERATOR.get());
                         })
                         .build()
         );

@@ -4,15 +4,18 @@
   "group": "generator",
   "key": {
     "A": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:iron_ingot"
     },
     "B": {
-      "item": "bettersoils:double_compressed_dirt"
+      "item": "minecraft:smooth_stone"
+    },
+    "C": {
+      "item": "bettersoils:compressed_dirt"
     }
   },
   "pattern": [
-    "BBB",
-    "BAB",
+    "AAA",
+    "ACA",
     "BBB"
   ],
   "result": {

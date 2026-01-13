@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_compressed_dirt": {
+    "has_dirt": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bettersoils:compressed_dirt"
+              "minecraft:dirt"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dirt_generator"
+        "recipe": "minecraft:compressed_dirt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_compressed_dirt",
+      "has_dirt",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dirt_generator"
+      "minecraft:compressed_dirt"
     ]
   },
   "sends_telemetry_event": false

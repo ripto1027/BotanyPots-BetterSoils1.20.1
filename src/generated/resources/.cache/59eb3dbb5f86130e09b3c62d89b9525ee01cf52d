@@ -1,0 +1,8 @@
+// 1.20.1	2026-01-11T11:41:16.3301164	Loot Tables
+997e3e6a2b75456a036d54c7d110a9ed6f6fb2f3 data/bettersoils/loot_tables/blocks/compressed_dirt.json
+5d44d6b916a34e2088f10f1f6901bb1a3bfabf1a data/bettersoils/loot_tables/blocks/dirt_generator.json
+6458385969ddd7fb1b0670a2cc28ca823a56cf67 data/bettersoils/loot_tables/blocks/double_compressed_dirt.json
+bfa703f028047d06c032b3d85543a0136bc1f657 data/bettersoils/loot_tables/blocks/quadruple_compressed_dirt.json
+734b2ec7dd9d94f95f6127d40c38274e235b6a6a data/bettersoils/loot_tables/blocks/quintuple_compressed_dirt.json
+96b9e93c1b9e57456540ae2429382f3ae09518c8 data/bettersoils/loot_tables/blocks/sextuple_compressed_dirt.json
+33aaba08e582a13670cf76128e9d014cbd42605b data/bettersoils/loot_tables/blocks/triple_compressed_dirt.json

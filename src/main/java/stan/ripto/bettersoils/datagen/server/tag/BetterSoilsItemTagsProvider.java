@@ -22,9 +22,5 @@ public class BetterSoilsItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         copy(BlockTags.DIRT, ItemTags.DIRT);
-        copy(Tags.Blocks.COBBLESTONE, Tags.Items.COBBLESTONE);
-        copy(BetterSoilsTags.Blocks.STORAGE_BLOCKS_DIRT, BetterSoilsTags.Items.STORAGE_BLOCKS_DIRT);
-        copy(BetterSoilsTags.Blocks.STORAGE_BLOCKS_COBBLESTONE, BetterSoilsTags.Items.STORAGE_BLOCKS_COBBLESTONE);
-        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
     }
 }

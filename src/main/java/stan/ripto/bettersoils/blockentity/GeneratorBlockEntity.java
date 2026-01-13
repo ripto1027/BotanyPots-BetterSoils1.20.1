@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class GeneratorBlockEntity extends BlockEntity {
+    private int wait = 20;
     private int generateCount = 1;
     private BlockPos targetPos;
     private final Item generateItem;
@@ -57,25 +58,29 @@ public class GeneratorBlockEntity extends BlockEntity {
 
     public void tick(Level level) {
         if (level.isClientSide()) return;
+        this.wait--;
 
-        ItemStack stack = inventory.getStackInSlot(0);
-        if (stack.isEmpty()) {
-            inventory.setStackInSlot(0, new ItemStack(generateItem, generateCount));
-        } else if (stack.getCount() < inventory.getSlotLimit(0)) {
-            if (stack.getCount() + generateCount < inventory.getSlotLimit(0)) {
-                stack.grow(generateCount);
-            } else {
-                stack.grow(inventory.getSlotLimit(0) - stack.getCount());
+        if (this.wait == 0) {
+            this.wait = 20;
+            ItemStack stack = inventory.getStackInSlot(0);
+            if (stack.isEmpty()) {
+                inventory.setStackInSlot(0, new ItemStack(generateItem, generateCount));
+            } else if (stack.getCount() < inventory.getSlotLimit(0)) {
+                if (stack.getCount() + generateCount < inventory.getSlotLimit(0)) {
+                    stack.grow(generateCount);
+                } else {
+                    stack.grow(inventory.getSlotLimit(0) - stack.getCount());
+                }
             }
-        }
 
-        if (targetPos != null && level.isLoaded(targetPos)) {
-            BlockEntity targetEntity = level.getBlockEntity(targetPos);
-            if (targetEntity != null) {
-                targetEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(targetHandler -> {
-                    ItemStack extracted = ItemHandlerHelper.insertItem(targetHandler, inventory.getStackInSlot(0), false);
-                    inventory.setStackInSlot(0, extracted);
-                });
+            if (targetPos != null && level.isLoaded(targetPos)) {
+                BlockEntity targetEntity = level.getBlockEntity(targetPos);
+                if (targetEntity != null) {
+                    targetEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(targetHandler -> {
+                        ItemStack extracted = ItemHandlerHelper.insertItem(targetHandler, inventory.getStackInSlot(0), false);
+                        inventory.setStackInSlot(0, extracted);
+                    });
+                }
             }
         }
     }

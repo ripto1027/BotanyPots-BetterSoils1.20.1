@@ -20,20 +20,11 @@ public class BetterSoilsBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(@NotNull HolderLookup.Provider pProvider) {
-        BetterSoilsBlocks.dirtRegistryList.forEach(element -> {
-            tag(BetterSoilsTags.Blocks.STORAGE_BLOCKS_DIRT).add(element.get());
-            tag(Tags.Blocks.STORAGE_BLOCKS).add(element.get());
+        BetterSoilsBlocks.blockRegistryList.forEach(element -> {
             tag(BlockTags.MINEABLE_WITH_SHOVEL).add(element.get());
             tag(BlockTags.DIRT).add(element.get());
         });
 
-        BetterSoilsBlocks.cobblestoneRegistryList.forEach(element -> {
-            tag(BetterSoilsTags.Blocks.STORAGE_BLOCKS_COBBLESTONE).add(element.get());
-            tag(Tags.Blocks.STORAGE_BLOCKS).add(element.get());
-            tag(BlockTags.MINEABLE_WITH_PICKAXE).add(element.get());
-            tag(Tags.Blocks.COBBLESTONE).add(element.get());
-        });
-
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BetterSoilsBlocks.DIRT_GENERATOR.get(), BetterSoilsBlocks.COBBLESTONE_GENERATOR.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BetterSoilsBlocks.DIRT_GENERATOR.get());
     }
 }

@@ -19,7 +19,6 @@ public class BetterSoilsBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         BetterSoilsBlocks.blockRegistryList.forEach(element -> simpleBlockWithItem(element.get(), cubeAll(element.get())));
         horizontalBlock(BetterSoilsBlocks.DIRT_GENERATOR.get());
-        horizontalBlock(BetterSoilsBlocks.COBBLESTONE_GENERATOR.get());
     }
 
     private void horizontalBlock(Block generator) {

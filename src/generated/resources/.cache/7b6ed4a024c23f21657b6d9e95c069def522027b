@@ -1,0 +1,4 @@
+// 1.20.1	2026-01-11T11:41:16.3301164	Tags for minecraft:block mod id bettersoils
+952880ff7ffb99fed7862ba22d22eae91afdfd05 data/minecraft/tags/blocks/dirt.json
+ea1347bad7cba0c808b8d745ca18764565af48d4 data/minecraft/tags/blocks/mineable/pickaxe.json
+952880ff7ffb99fed7862ba22d22eae91afdfd05 data/minecraft/tags/blocks/mineable/shovel.json

@@ -27,7 +27,6 @@ public class BetterSoilsLootTableProvider {
         protected void generate() {
             BetterSoilsBlocks.blockRegistryList.forEach(element -> dropSelf(element.get()));
             dropSelf(BetterSoilsBlocks.DIRT_GENERATOR.get());
-            dropSelf(BetterSoilsBlocks.COBBLESTONE_GENERATOR.get());
         }
 
         @Override

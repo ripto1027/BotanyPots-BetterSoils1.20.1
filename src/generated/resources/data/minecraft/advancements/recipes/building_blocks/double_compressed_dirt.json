@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dirt_generator"
+        "recipe": "minecraft:double_compressed_dirt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dirt_generator"
+      "minecraft:double_compressed_dirt"
     ]
   },
   "sends_telemetry_event": false

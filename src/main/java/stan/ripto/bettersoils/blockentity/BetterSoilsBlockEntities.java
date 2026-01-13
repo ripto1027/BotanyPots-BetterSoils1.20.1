@@ -11,22 +11,13 @@ import stan.ripto.bettersoils.block.BlockData;
 public class BetterSoilsBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterSoils.MOD_ID);
 
+    @SuppressWarnings("DataFlowIssue")
     public static final RegistryObject<BlockEntityType<DirtGeneratorBlockEntity>> DIRT_GENERATOR = BLOCK_ENTITIES.register(
             BlockData.DIRT_GENERATOR.NAME,
             () -> BlockEntityType
                     .Builder.of(
                             DirtGeneratorBlockEntity::new,
                             BetterSoilsBlocks.DIRT_GENERATOR.get()
-                    )
-                    .build(null)
-    );
-
-    public static final RegistryObject<BlockEntityType<CobblestoneGeneratorBlockEntity>> COBBLESTONE_GENERATOR = BLOCK_ENTITIES.register(
-            BlockData.COBBLESTONE_GENERATOR.NAME,
-            () -> BlockEntityType
-                    .Builder.of(
-                            CobblestoneGeneratorBlockEntity::new,
-                            BetterSoilsBlocks.COBBLESTONE_GENERATOR.get()
                     )
                     .build(null)
     );
