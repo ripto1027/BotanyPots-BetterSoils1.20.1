@@ -36,12 +36,12 @@ public class BetterSoilsLanguageProvider {
 
         @Override
         protected void addTranslations() {
-            addBlock(BetterSoilsBlocks.COMPRESSED_DIRT, "肥沃な土");
-            addBlock(BetterSoilsBlocks.DOUBLE_COMPRESSED_DIRT, "さらに肥沃な土");
-            addBlock(BetterSoilsBlocks.TRIPLE_COMPRESSED_DIRT, "もっと肥沃な土");
-            addBlock(BetterSoilsBlocks.QUADRUPLE_COMPRESSED_DIRT, "すごい肥沃な土");
-            addBlock(BetterSoilsBlocks.QUINTUPLE_COMPRESSED_DIRT, "やばい肥沃な土");
-            addBlock(BetterSoilsBlocks.SEXTUPLE_COMPRESSED_DIRT, "ありえないくらい肥沃な土");
+            addBlock(BetterSoilsBlocks.COMPRESSED_DIRT, "肥沃な土 I");
+            addBlock(BetterSoilsBlocks.DOUBLE_COMPRESSED_DIRT, "肥沃な土 II");
+            addBlock(BetterSoilsBlocks.TRIPLE_COMPRESSED_DIRT, "肥沃な土 III");
+            addBlock(BetterSoilsBlocks.QUADRUPLE_COMPRESSED_DIRT, "肥沃な土 IV");
+            addBlock(BetterSoilsBlocks.QUINTUPLE_COMPRESSED_DIRT, "肥沃な土 V");
+            addBlock(BetterSoilsBlocks.SEXTUPLE_COMPRESSED_DIRT, "肥沃な土 VI");
 
             addBlock(BetterSoilsBlocks.DIRT_GENERATOR, "土生成機");
 

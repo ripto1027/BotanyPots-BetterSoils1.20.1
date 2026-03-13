@@ -32,7 +32,17 @@ public class BetterSoilsRecipeProvider extends RecipeProvider {
 
         generatorRecipes(writer, BetterSoilsBlocks.DIRT_GENERATOR.get(), BetterSoilsBlocks.COMPRESSED_DIRT.get());
 
-        List<String> categories = List.of("dirt", "stone", "water", "sand", "wood", "soul_sand", "crimson_nylium", "warped_nylium");
+        List<String> categories = List.of(
+                "dirt",
+                "stone",
+                "water",
+                "sand",
+                "wood",
+                "jungle_wood",
+                "soul_sand",
+                "crimson_nylium",
+                "warped_nylium"
+        );
 
         soilRecipes(writer, BetterSoilsBlocks.COMPRESSED_DIRT.get(), categories, 1.2F);
         soilRecipes(writer, BetterSoilsBlocks.DOUBLE_COMPRESSED_DIRT.get(), categories, 1.5F);
@@ -48,7 +58,7 @@ public class BetterSoilsRecipeProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result)
                 .define('A', ingredient)
-                .define('B', Items.BONE_BLOCK)
+                .define('B', Items.BONE_MEAL)
                 .define('C', Items.BROWN_DYE)
                 .pattern("ABA")
                 .pattern("BCB")
